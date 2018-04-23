@@ -36,7 +36,7 @@ $('#login').click(function(e){
 			//request.open('POST', 'https://api-staging.sendd.co/rest-auth/login/');
 			request.open('POST', 'https://app.sendd.co/rest-auth/login/');				
 			request.setRequestHeader('Content-Type', 'application/json');
-
+			request.setRequestHeader('Access-Control-Allow-Origin', '*'); 
 			request.onreadystatechange = function () {
 			  if (this.readyState === 4) {
 				console.log('Status:', this.status);
